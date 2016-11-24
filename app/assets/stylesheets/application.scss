@@ -14,5 +14,21 @@
  *= require_self
  */
 
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+
+$body-bg: #bdc3c7;
+$navbar-default-bg: #1abc9c;
+$navbar-default-link-color: #ffffff;
+$font-family-sans-serif: 'Josefin Sans', sans-serif;
+
+.center {
+	text-align: center;
+}
+
+.navbar-brand {
+	font-weight: bold;
+}
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
