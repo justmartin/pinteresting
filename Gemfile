@@ -13,6 +13,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise', '~> 4.2.0'
 gem 'paperclip', '~> 5.0.0'
 gem 'aws-sdk', '~> 2.3'
+gem 'masonry-rails', '~> 0.2.4'
+gem 'jquery-turbolinks'
 
 group :development, :test do
   gem 'byebug', platform: :mri
