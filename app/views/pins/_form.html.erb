@@ -11,11 +11,15 @@
     </div>
   <% end %>
 
-   <div class="field">
+  <div class="field">
     <%= f.label :image %>
     <%= f.file_field :image, class: "form-control" %>
   </div>
 
+  <div class="field">
+    <%= f.label :decade %><br>
+    <%= f.select :decade, options_for_select(@decades), class: "form-control" %>
+  </div>
 
   <div class="field">
     <%= f.label :description %>

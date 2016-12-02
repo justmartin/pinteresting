@@ -11,6 +11,13 @@ class PinsController < ApplicationController
   end
 
   def new
+    @decades = [
+      ["90's", "90's"],
+      ["80's", "80's"],
+      ["70's", "70's"],
+      ["60's", "60's"]
+    ]
+
     @pin = current_user.pins.build
   end
 
@@ -51,6 +58,6 @@ class PinsController < ApplicationController
     end
 
     def pin_params
-      params.require(:pin).permit(:description, :image)
+      params.require(:pin).permit(:description, :image, :decade)
     end
 end

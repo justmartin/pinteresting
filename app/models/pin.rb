@@ -6,4 +6,5 @@ class Pin < ApplicationRecord
 
   validates :description, presence: true
   validates :image, presence: true
+  validates :decade, presence: true
 end
