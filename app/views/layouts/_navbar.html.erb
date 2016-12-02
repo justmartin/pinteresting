@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav id="navbar" class="navbar navbar-default">
   <div class="container">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -10,6 +10,15 @@
           <span class="icon-bar"></span>
         </button>
         <%= link_to "RW", root_path, class: "navbar-brand" %>
+        <ul class="nav navbar-nav navbar-left">
+          <% if user_signed_in? %>
+            <li class="new-pin">
+              <%= link_to new_pin_path do %>
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New Pin
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -17,11 +26,6 @@
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Home", root_path %></li>
           <% if user_signed_in? %>
-            <li>
-              <%= link_to new_pin_path do %>
-                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New Pin
-              <% end %>
-            </li>
             <li><%= link_to "Account Settings", edit_user_registration_path %></li>
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
           <% else %>

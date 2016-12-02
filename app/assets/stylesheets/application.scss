@@ -20,7 +20,7 @@
 
 $body-bg: #bdc3c7;
 $navbar-default-bg: #1abc9c;
-$navbar-default-link-color: #ffffff;
+$navbar-default-link-color: black;
 $font-family-sans-serif: 'Josefin Sans', sans-serif;
 
 .center {
@@ -29,6 +29,14 @@ $font-family-sans-serif: 'Josefin Sans', sans-serif;
 
 .navbar-brand {
 	font-weight: bold;
+}
+
+#navbar {
+	background: 
+  linear-gradient(
+    rgba(255, 255, 255, .8), 
+    rgba(255, 255, 255, .8)),
+    url("shapes.jpg");
 }
 
 @import "bootstrap-sprockets";
