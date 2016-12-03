@@ -16,6 +16,8 @@ class PinsController < ApplicationController
   end
 
   def show
+    @pins = Pin.find_by(id: params[:id])
+    @comments = @pins.comments.all
   end
 
   def new

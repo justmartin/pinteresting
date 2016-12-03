@@ -16,6 +16,28 @@
           <% end %>
 				<% end %>
 			</div>
+
+			<div class="comment-section panel-footer">
+			  <%= form_tag create_comment_path, method: "post" do %>
+			    <%= hidden_field_tag "id", @pin.id %>
+			    
+			    <div class="form-group">
+			    	<%= text_area_tag :comment, nil, class: "form-control" %>
+			    </div>
+
+			    <div class="form-group align-right">
+			    	<%= submit_tag "Comment", class: "btn btn-primary" %>
+			    </div>
+			  <% end %>
+
+			  <div class="comment_list">
+				  <% @comments.each do |comment| %>
+				    <%= comment.comment %> <br>
+				    <%= comment.user.name %> <br>
+				   <% end %>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 </div>

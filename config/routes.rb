@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   root "pins#index"
   get "/nineties" => "pins#nineties"
   get "/eighties" => "pins#eighties"
+  post 'comments' => 'comments#create', as: "create_comment"
   
 end
