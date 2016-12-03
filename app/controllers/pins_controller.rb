@@ -4,7 +4,15 @@ class PinsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 15)
+    @pins = Pin.all.order("random()").paginate(:page => params[:page], :per_page => 15)
+  end
+
+  def nineties
+    @nineties_pins = Pin.where(decade: "90's").order("created_at DESC").paginate(:page => params[:page], :per_page => 15)
+  end
+
+  def eighties
+    @eighties_pins = Pin.where(decade: "80's").order("created_at DESC").paginate(:page => params[:page], :per_page => 15)
   end
 
   def show
