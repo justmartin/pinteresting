@@ -1,24 +1,17 @@
-# README
+# Remember When
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Pin style inspired app that allow users to post memorabilia categorized by decades built using Ruby on Rails.
 
-Things you may want to cover:
+## How To Launch
 
-* Ruby version
+Clone repository and cd into project's directory
 
-* System dependencies
+Run 'rails s'
 
-* Configuration
+Visit 'http://localhost:3000/'
 
-* Database creation
+## Usage
 
-* Database initialization
+As a guest, you can view all user pins assorted in random order from all decades. Pins consist of an image, decade, description, and the user who posted it.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+After signing up, you'll have the ability to upload new pins. You can edit or delete pins that you have uploaded. Only view access is available for other pins. You can now view pins by filtering on different decades.
